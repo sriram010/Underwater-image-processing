@@ -27,7 +27,7 @@ alpha_value = 0.5
 window_size_value = 5
 output_image = red_channel_compensation(input_image_path, alpha_value, window_size_value)
 
-Save the compensated image
+# Save the compensated image
 output_image_path = "compensated_image.jpg"
 cv2.imwrite(output_image_path, output_image)
 print(f"Compensated image saved as {output_image_path}")
