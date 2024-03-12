@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 # Defineing a function for adaptive histogram transform
-def adaptive_histogram_transform(image):
+def AdaptiveHistogramTransform(image):
     # Converting the image from RGB to HSV color space
     hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
     # Splitting the HSV channels
