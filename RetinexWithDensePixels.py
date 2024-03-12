@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 # Defining a function to implement illuminance improvement by retinex with dense pixels
-def RetinexWithDensePixels(image):
+def retinex_with_dense_pixels(image):
     # Converting the image from BGR to HSV color space
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     # Extracting the value component
