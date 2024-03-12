@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 # Defineing a function for adaptive histogram transform
-def adaptive_histogram_transform(image):
+def AdaptiveHistogramTransform(image):
     # Converting the image from RGB to HSV color space
     hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
     # Splitting the HSV channels
@@ -19,7 +19,7 @@ def adaptive_histogram_transform(image):
         elif abs(x - mean_v) <= epsilon:
             return x - mean_v + 120
         else:
-            return 115 + 140 * (x - mean_v - epsilon) / (255 - mean_v - epsilon)
+            return 130 + (115 * (x - mean_v - epsilon) / (235 - mean_v))
     # Applying the transform function to the V channel
     v = np.vectorize(transform)(v)
     # Clipping the values to the range [0, 255]

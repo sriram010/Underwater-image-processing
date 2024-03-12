@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 # Defining a function to perform red channel compensation
-def red_channel_compensation(image, alpha, window_size):
+def RedChannelCompensation(image, alpha, window_size):
     # Converting the image to float32
     image = image.astype(np.float32)
     # Spliting the image into RGB channels
