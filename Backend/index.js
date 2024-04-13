@@ -36,7 +36,7 @@ app.get("/:id", (req, res) => {
     if (err) throw err;
     res.status(200).json({
       message: "Image processed successfully",
-      path: `../../Backend/ImageProcessing/OutputImages/processed_image.png`,
+      path: `../../Frontend/public/processed_image.png`,
     });
     console.log("finished");
   });
